@@ -362,7 +362,7 @@ li:hover li a:hover {
     background-color: #EFF0F3;
 }
 
-.category-header, .section-header {
+.category-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -480,87 +480,95 @@ li:hover li a:hover {
     color: #374151;
 }
 
-/* Articles Section Styles */
-.articles-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+/* Lifestyle Section Styles */
+#lifestyle-section {
+  margin-top: 40px;
 }
 
-.article-card {
-    background: white;
-    border-radius: 24px;
-    overflow: hidden;
-    padding: 14px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease;
-    width: 300px;
-    height: 425px;
-}
-
-.article-card:hover {
-    transform: translateY(-5px);
-}
-
-.article-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 12px 12px 0 0;
-    margin-bottom: 16px;
-}
-
-.article-card h3 {
-    font-size: 24px;
-    font-weight: 600;
-    margin: 16px 16px 24px;
-    color: #1f2937;
-    line-height: 1.4;
-    background: none;
-}
-
-.article-meta {
-    display: flex;
-    align-items: center;
-    gap: 12px; /* Space between author and read time */
-    background: none;
-}
-
-.author-img {
-    width: 57px !important;
-    height: 57px !important;
-    border-radius: 50% !important;
-    object-fit: cover !important;
-    flex-shrink: 0;
-}
-
-.article-info {
-    display: flex;
-    align-items: center;
-    gap: 8;
-    color: #6b7280;
-    font-size: 14px;
-    background: none;
-}
-
-.article-info span {
-    background: none;
+.blog-sections {
+    padding: 2rem;
+    background-color: #EFF0F3;
 }
 
 .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-.section-header h2 {
-    font-size: 1.8rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
+.article-card {
+  background-color: white;
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 14px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.article-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 16px;
+}
+
+.article-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 16px;
+  color: #2B2C34;
+  line-height: 1.5;
+  background: none;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  margin: 0 16px 16px;
+  background: none;
+}
+
+.article-meta .author-img {
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.author-info{
+    background: none;
+    color: #6b7280;
+    background: white;
+}
+
+.article-meta .author-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
+  background: none;
+}
+
+.article-meta .date-info {
+  font-size: 14px;
+  color: #999;
+  background: none;
+}
 
 @media (max-width: 768px) {
     .category-buttons {
@@ -574,12 +582,6 @@ li:hover li a:hover {
 @media (max-width: 480px) {
     .articles-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .section-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
     }
 }
 @media (max-width: 800px) {
