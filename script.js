@@ -9,10 +9,10 @@ $(document).ready(function(){
     });
 });
 
-document.getElementById('scroll-icon').addEventListener('click', function() {
-    document.getElementById('bottom').scrollIntoView({ behavior: 'smooth' });
-});
-
+document.querySelector('button').addEventListener('click', function() {
+    window.scrollTo({ top: 500, behavior: 'smooth' });
+  });
+  
 function showSidebar(){
     const sidebar = document.querySelector('.side-nav-links');
     sidebar.style.display = 'flex';
