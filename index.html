@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zyte.Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="fonts/font-awesome.min.css" />
+  </head>
+
+  <body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <img class="logo" src="images/logo.png">
+        <ul id="sidenavmenu" class="side-nav-links">
+          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg><span class="side-nav-x"></span></a></li>
+          <li><a href="#home"><span class="entypo-home"></span><span class="nav-link">Home</span></a></li>
+          <li><a href="#post"><span class="entypo-post"></span><span class="nav-link">Post</span></a></li>
+          <li><a href="#category"><span class="entypo-lamp"></span><span class="nav-link">Category</span></a>
+          </li>
+          <li><a href="#about"><span class="entypo-mail"></span><span class="nav-link">About</span></a></li>
+          <li><a href="#login"><span class="entypo-login"></span><span class="nav-link">Login</span></a></li>
+        </ul>
+        <ul id="navmenu" class="nav-links">
+          <li class="hideOnMobile"><a href="#home"><span class="entypo-home"></span><span class="nav-link">Home</span></a></li>
+          <li class="hideOnMobile"><a href="#post"><span class="entypo-post"></span><span class="nav-link">Post</span></a></li>
+          <li class="hideOnMobile"><a href="#category" id="submenu"><span class="entypo-lamp"></span><span class="nav-link">Category</span></a>
+            <ul id="drop">
+              <li><a href="#">Lifestyle</a></li>
+              <li><a href="#">Tech</a></li>
+              <li><a href="#">Travel</a></li>
+              <li><a href="#">Food</a></li>
+              <li><a href="#">Personal</a></li>
+            </ul>
+          </li>
+          <li class="hideOnMobile"><a href="#about"><span class="entypo-mail"></span><span class="nav-link">About</span></a></li>
+          <li class="hideOnMobile"><a href="#login"><span class="entypo-login"></span><span class="nav-link">Login</span></a></li>
+        </ul>
+        <form class="search-form" action="search.php" method="get">
+          <div class="searchContainer">
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search searchIcon"></i>
+            </button>
+            <input class="searchBox" type="search" name="query" placeholder="Search...">
+          </div>
+        </form>
+        <div onclick=showSidebar() class="sidebar-menu"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></div>
+      </div>
+    </nav>
+  </header>
+
+    <div class="hero">
+      <div class="overlap-group">
+        <div class="frame">
+          <div class="intro-text">Hi, this Is Zyte’s Blog</div>
+          <div class="div">
+            <p class="intro-paragraph">
+              On this blog, you'll find a collection of insightful articles, personal experiences, and expert tips
+              designed to inform, inspire, and spark meaningful conversations.
+            </p>
+          </div>
+          <form class="email" action="index.php" method="post">
+            <input type="email" name="email" placeholder="Enter your email here..." required>
+            <button class="btn_subscribe" type="submit">Subscribe</button>
+          </form>
+        </div>
+        <img class="group-photo" src="images/groupphoto.png" alt="group photo"/>
+      </div>
+    </div>
+
+    <button id="scroll-icon" class="scroll-icon">
+        <img src="images/icons/scrolldown.svg" alt="scroll down icon"/>
+    </button>
+
+    <section class="category-section">
+        <div class="category-header">
+            <h2>Browse The Category ━━ </h2>
+            <a href="#" class="see-all">See All Category</a>
+        </div>
+        
+        <div class="category-buttons">
+            <a href="#lifestyle-section" class="category-card lifestyle">
+                <span class="category-name">Lifestyle</span>
+            </a>
+            
+            <a href="#tech-section" class="category-card tech">
+                <span class="category-name">Tech</span>
+            </a>
+            
+            <a href="#travel-section" class="category-card travel">
+                <span class="category-name">Travel</span>
+            </a>
+            
+            <a href="#food-section" class="category-card food">
+                <span class="category-name">Food</span>
+            </a>
+            
+            <a href="#personal-section" class="category-card personal">
+                <span class="category-name">Personal</span>
+            </a>
+        </div>
+    </section>
+
+  <section id="lifestyle-section" class="blog-sections">
+    <!-- Lifestyle Section -->
+    <div class="section-container">
+        <div class="section-header">
+            <h2>Lifestyle <span class="header-line">━━</span></h2>
+            <a href="#" class="see-all">See All Article ›</a>
+        </div>
+        
+        <div class="articles-grid">
+            <article class="article-card">
+                <img src="images/array-js.jpg" alt="Array in Javascript">
+                <h3>Array In Javascript - Learn JS #3</h3>
+                <div class="article-meta">
+                    <div class="author">
+                        <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                        <span>Dasteen</span>
+                    </div>
+                    <div class="article-info">
+                        <span>Jan 10, 2022</span>
+                        <span>3 Min Read</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="images/js-fundamentals.jpg" alt="Javascript Fundamentals">
+                <h3>Fundamental Of Javascript</h3>
+                <div class="article-meta">
+                    <div class="author">
+                        <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                        <span>Dasteen</span>
+                    </div>
+                    <div class="article-info">
+                        <span>Jan 10, 2022</span>
+                        <span>3 Min Read</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="images/js-projects.jpg" alt="Javascript Projects">
+                <h3>7 Project With Javascript You Must Try For Your Portfolio</h3>
+                <div class="article-meta">
+                    <div class="author">
+                        <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                        <span>Dasteen</span>
+                    </div>
+                    <div class="article-info">
+                        <span>Jan 10, 2022</span>
+                        <span>3 Min Read</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <img src="images/js-calculator.jpg" alt="Javascript Calculator">
+                <h3>Make Simple Calculator With Javascript</h3>
+                <div class="article-meta">
+                    <div class="author">
+                        <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                        <span>Dasteen</span>
+                    </div>
+                    <div class="article-info">
+                        <span>Jan 10, 2022</span>
+                        <span>3 Min Read</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <section  id="tech-section" class="blog-sections">
+          <!-- Tech Section -->
+      <div class="section-container">
+          <div class="section-header">
+              <h2>Tech <span class="header-line">━━</span></h2>
+              <a href="#" class="see-all">See All Article ›</a>
+          </div>
+          
+          <div class="articles-grid">
+              <article class="article-card">
+                  <img src="images/array-js.jpg" alt="Array in Javascript">
+                  <h3>Array In Javascript - Learn JS #3</h3>
+                  <div class="article-meta">
+                      <div class="author">
+                          <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                          <span>Dasteen</span>
+                      </div>
+                      <div class="article-info">
+                          <span>Jan 10, 2022</span>
+                          <span>3 Min Read</span>
+                      </div>
+                  </div>
+              </article>
+  
+              <article class="article-card">
+                  <img src="images/js-fundamentals.jpg" alt="Javascript Fundamentals">
+                  <h3>Fundamental Of Javascript</h3>
+                  <div class="article-meta">
+                      <div class="author">
+                          <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                          <span>Dasteen</span>
+                      </div>
+                      <div class="article-info">
+                          <span>Jan 10, 2022</span>
+                          <span>3 Min Read</span>
+                      </div>
+                  </div>
+              </article>
+  
+              <article class="article-card">
+                  <img src="images/js-projects.jpg" alt="Javascript Projects">
+                  <h3>7 Project With Javascript You Must Try For Your Portfolio</h3>
+                  <div class="article-meta">
+                      <div class="author">
+                          <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                          <span>Dasteen</span>
+                      </div>
+                      <div class="article-info">
+                          <span>Jan 10, 2022</span>
+                          <span>3 Min Read</span>
+                      </div>
+                  </div>
+              </article>
+  
+              <article class="article-card">
+                  <img src="images/js-calculator.jpg" alt="Javascript Calculator">
+                  <h3>Make Simple Calculator With Javascript</h3>
+                  <div class="article-meta">
+                      <div class="author">
+                          <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                          <span>Dasteen</span>
+                      </div>
+                      <div class="article-info">
+                          <span>Jan 10, 2022</span>
+                          <span>3 Min Read</span>
+                      </div>
+                  </div>
+              </article>
+          </div>
+      </div>
+
+      <section id="travel-section" class="blog-sections">
+        <!-- Travel Section -->
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Travel <span class="header-line">━━</span></h2>
+                <a href="#" class="see-all">See All Article ›</a>
+            </div>
+            
+            <div class="articles-grid">
+                <article class="article-card">
+                    <img src="images/array-js.jpg" alt="Array in Javascript">
+                    <h3>Array In Javascript - Learn JS #3</h3>
+                    <div class="article-meta">
+                        <div class="author">
+                            <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                            <span>Dasteen</span>
+                        </div>
+                        <div class="article-info">
+                            <span>Jan 10, 2022</span>
+                            <span>3 Min Read</span>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="article-card">
+                    <img src="images/js-fundamentals.jpg" alt="Javascript Fundamentals">
+                    <h3>Fundamental Of Javascript</h3>
+                    <div class="article-meta">
+                        <div class="author">
+                            <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                            <span>Dasteen</span>
+                        </div>
+                        <div class="article-info">
+                            <span>Jan 10, 2022</span>
+                            <span>3 Min Read</span>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="article-card">
+                    <img src="images/js-projects.jpg" alt="Javascript Projects">
+                    <h3>7 Project With Javascript You Must Try For Your Portfolio</h3>
+                    <div class="article-meta">
+                        <div class="author">
+                            <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                            <span>Dasteen</span>
+                        </div>
+                        <div class="article-info">
+                            <span>Jan 10, 2022</span>
+                            <span>3 Min Read</span>
+                        </div>
+                    </div>
+                </article>
+    
+                <article class="article-card">
+                    <img src="images/js-calculator.jpg" alt="Javascript Calculator">
+                    <h3>Make Simple Calculator With Javascript</h3>
+                    <div class="article-meta">
+                        <div class="author">
+                            <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                            <span>Dasteen</span>
+                        </div>
+                        <div class="article-info">
+                            <span>Jan 10, 2022</span>
+                            <span>3 Min Read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <section id="food-section" class="blog-sections">
+          <!-- Food Section -->
+          <div class="section-container">
+              <div class="section-header">
+                  <h2>Food <span class="header-line">━━</span></h2>
+                  <a href="#" class="see-all">See All Article ›</a>
+              </div>
+              
+              <div class="articles-grid">
+                  <article class="article-card">
+                      <img src="images/array-js.jpg" alt="Array in Javascript">
+                      <h3>Array In Javascript - Learn JS #3</h3>
+                      <div class="article-meta">
+                          <div class="author">
+                              <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                              <span>Dasteen</span>
+                          </div>
+                          <div class="article-info">
+                              <span>Jan 10, 2022</span>
+                              <span>3 Min Read</span>
+                          </div>
+                      </div>
+                  </article>
+      
+                  <article class="article-card">
+                      <img src="images/js-fundamentals.jpg" alt="Javascript Fundamentals">
+                      <h3>Fundamental Of Javascript</h3>
+                      <div class="article-meta">
+                          <div class="author">
+                              <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                              <span>Dasteen</span>
+                          </div>
+                          <div class="article-info">
+                              <span>Jan 10, 2022</span>
+                              <span>3 Min Read</span>
+                          </div>
+                      </div>
+                  </article>
+      
+                  <article class="article-card">
+                      <img src="images/js-projects.jpg" alt="Javascript Projects">
+                      <h3>7 Project With Javascript You Must Try For Your Portfolio</h3>
+                      <div class="article-meta">
+                          <div class="author">
+                              <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                              <span>Dasteen</span>
+                          </div>
+                          <div class="article-info">
+                              <span>Jan 10, 2022</span>
+                              <span>3 Min Read</span>
+                          </div>
+                      </div>
+                  </article>
+      
+                  <article class="article-card">
+                      <img src="images/js-calculator.jpg" alt="Javascript Calculator">
+                      <h3>Make Simple Calculator With Javascript</h3>
+                      <div class="article-meta">
+                          <div class="author">
+                              <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                              <span>Dasteen</span>
+                          </div>
+                          <div class="article-info">
+                              <span>Jan 10, 2022</span>
+                              <span>3 Min Read</span>
+                          </div>
+                      </div>
+                  </article>
+              </div>
+          </div>
+
+          <section id="personal-section" class="blog-sections">
+            <!-- Personal Section -->
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Personal <span class="header-line">━━</span></h2>
+                    <a href="#" class="see-all">See All Article ›</a>
+                </div>
+                
+                <div class="articles-grid">
+                    <article class="article-card">
+                        <img src="images/array-js.jpg" alt="Array in Javascript">
+                        <h3>Array In Javascript - Learn JS #3</h3>
+                        <div class="article-meta">
+                            <div class="author">
+                                <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                                <span>Dasteen</span>
+                            </div>
+                            <div class="article-info">
+                                <span>Jan 10, 2022</span>
+                                <span>3 Min Read</span>
+                            </div>
+                        </div>
+                    </article>
+        
+                    <article class="article-card">
+                        <img src="images/js-fundamentals.jpg" alt="Javascript Fundamentals">
+                        <h3>Fundamental Of Javascript</h3>
+                        <div class="article-meta">
+                            <div class="author">
+                                <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                                <span>Dasteen</span>
+                            </div>
+                            <div class="article-info">
+                                <span>Jan 10, 2022</span>
+                                <span>3 Min Read</span>
+                            </div>
+                        </div>
+                    </article>
+        
+                    <article class="article-card">
+                        <img src="images/js-projects.jpg" alt="Javascript Projects">
+                        <h3>7 Project With Javascript You Must Try For Your Portfolio</h3>
+                        <div class="article-meta">
+                            <div class="author">
+                                <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                                <span>Dasteen</span>
+                            </div>
+                            <div class="article-info">
+                                <span>Jan 10, 2022</span>
+                                <span>3 Min Read</span>
+                            </div>
+                        </div>
+                    </article>
+        
+                    <article class="article-card">
+                        <img src="images/js-calculator.jpg" alt="Javascript Calculator">
+                        <h3>Make Simple Calculator With Javascript</h3>
+                        <div class="article-meta">
+                            <div class="author">
+                                <img src="images/dasteen.jpg" alt="Dasteen" class="author-img">
+                                <span>Dasteen</span>
+                            </div>
+                            <div class="article-info">
+                                <span>Jan 10, 2022</span>
+                                <span>3 Min Read</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div id="bottom"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
