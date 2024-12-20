@@ -570,6 +570,88 @@ li:hover li a:hover {
   background: none;
 }
 
+
+.date-info > * {
+    background-color:transparent;
+}
+
+/* Subscription Section Styles */
+.subscribe-section {
+    padding: 2rem;
+    background-color: #EFF0F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 300px;
+}
+
+.subscribe-section .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscribe-section .btn_more_articles {
+    padding: 20px 23px;
+    height: 67px;
+    background-color: rgba(60, 85, 204, 1);
+    border-radius: 8px;
+    border: none;
+    color: rgba(255, 255, 254, 1);
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    z-index: 12;
+    margin-bottom: 2rem;
+}
+
+.subscribe-section .btn_more_articles:hover::before,
+.subscribe-section .btn_more_articles:hover::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: hover-in-linking 1.5s ease-out;
+    background-color: rgb(23, 32, 82);
+}
+
+.subscribe-section .section-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+}
+
+.subscribe-form input[type="email"] {
+    flex: 1;
+    padding: 21px 25px;
+    border-radius: 8px;
+    border: 1px solid rgba(135, 140, 169, 1);
+    background-color: #FFFFFE;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(135, 140, 169, 1);
+    min-width: 300px;
+}
+
+.subscribe-form .btn_subscribe:hover {
+    background-color: #0056b3;
+}
+
 @media (max-width: 768px) {
     .category-buttons {
         justify-content: center;
