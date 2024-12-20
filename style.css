@@ -570,6 +570,10 @@ li:hover li a:hover {
   background: none;
 }
 
+.date-info > * {
+    background-color:transparent;
+}
+
 @media (max-width: 768px) {
     .category-buttons {
         justify-content: center;
